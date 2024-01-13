@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    
-<h1>My Name Is Faraz Shams</h1>
-<p class="text" id="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, quam, suscipit ipsum minus at, libero laudantium quasi dicta maiores quibusdam beatae. Quisquam excepturi vel dolores?<span id="dots">....</span><span id="hidden-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam tempora eaque, libero ex deserunt placeat laborum quasi expedita ipsum impedit dolor corrupti qui, voluptas ducimus iure odit doloremque facere quae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum commodi alias dolor dolorum quisquam quos saepe molestiae impedit ducimus pariatur?</span></p>
-<button id="btn" onclick="displaytext()">Read More</button>
+    <div class="container">
+        <div class="box">
+            
+            <h1>My Name Is Faraz Shams</h1>
+            <div class="sub-con">
+                <h2>Read More And Read Less Button Function</h2>
+            </div>
+            <p class="text" id="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, quam, suscipit
+                ipsum minus at, libero laudantium quasi dicta maiores quibusdam beatae. Quisquam excepturi vel
+                dolores?Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugiat nobis aspernatur magni a suscipit?<span id="dots">....</span><span id="hidden-text">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Aperiam tempora eaque, libero ex deserunt placeat laborum quasi expedita ipsum
+                    impedit dolor corrupti qui, voluptas ducimus iure odit doloremque facere quae?Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit. Harum commodi alias dolor dolorum quisquam quos saepe molestiae
+                    impedit ducimus pariatur?</span></p>
+            <button id="btn" onclick="displaytext()">Read More</button>
+        </div>
+    </div>
 
 
+    <script>
+        function displaytext() {
+            var dots = document.getElementById("dots");
+            var hide = document.getElementById("hidden-text");
+            var btn_btn = document.getElementById("btn");
 
-<script>
-function displaytext(){
-    var dots = document.getElementById("dots");
-    var hide = document.getElementById("hidden-text");
-    var btn_btn = document.getElementById("btn");
+            if (dots.style.display != "none") {
+                dots.style.display = "none";
+                hide.style.display = "inline";
+                btn_btn.innerHTML = "Read Less"
+            } else {
+                dots.style.display = "inline";
+                hide.style.display = "none";
+                btn_btn.innerHTML = "Read More";
+            }
 
-    if(dots.style.display != "none"){
-        dots.style.display="none";
-        hide.style.display = "inline";
-        btn_btn.innerHTML = "Read Less"
-    }else{
-        dots.style.display = "inline";
-        hide.style.display = "none";
-        btn_btn.innerHTML = "Read More";
-    }
-
-}
-</script>
+        }
+    </script>
 
 </body>
+
 </html>
